@@ -15,11 +15,11 @@ The curriculum for the practice is as described below. Each of the tasks will be
 
 *EXPLORE THE DATA*
 - **Task 1**: Create copy of the training set for data exploration
+- **Task 1**: Identify target attribute(s)
 - **Task 1**: Display descriptive statistics and information associated with attributes
 - For each attribute(column) and sample(row) find precentage of missing values
 - For each attribute check if there are any outliers
 - For each attribute, check the type of distribution (gaussian/normal, uniform, logrithmic, etc.)
-- Identify target attribute(s)
 - Visualize the data
 - Correlations between attributes(themselves) and target attribute
 - Documenting any learning
