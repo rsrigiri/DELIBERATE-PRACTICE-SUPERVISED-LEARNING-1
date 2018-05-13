@@ -38,7 +38,7 @@ The curriculum for the practice is as described below. Each of the tasks will be
 
 *DATA PREPARATION*
 - Keep original dataset and work on copies of data
-- Note: Write functions for all data transformations keeping in mind that the test set will eventually need these transformations. 
+- **Note**: Write functions for all data transformations keeping in mind that the test set will eventually need these transformations. 
 - Address NULL values. For each variable (column) and sample(row) find precentage of missing values. While imputing missing data with mean, median, regression, combine the attribute data from train and test sets, or drop columns (or rows). Note: If rows are dropped, it should be done only in the training set.
 - Outlier detection and remedy. If outliers are removed, it should be done only in the training set.
 - Scale/Standardize/Normalize the features (for continuous variables).
