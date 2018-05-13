@@ -4,7 +4,7 @@ The curriculum for the practice is as described below. Each of the tasks will be
 
 ### CURRICULUM (SUPERVISED LEARNING)
 *GET THE DATA*
-- **Task 1**: Reading in the training and test sets (.csv format)
+- Reading in the training and test sets (.csv format)
 - Read datasets from formats other than .csv
   - json
   - sqlite
@@ -13,26 +13,40 @@ The curriculum for the practice is as described below. Each of the tasks will be
   - postgresql
   - webpages
 
-*EXPLORE THE DATA*
-- **Task 1**: Create copy of the training set for data exploration
-- **Task 1**: Identify target attribute(s)
-- **Task 1**: Display descriptive statistics and information associated with attributes
-- For each attribute(column) and sample(row) find precentage of missing values
-- For each attribute check if there are any outliers
-- For each attribute, check the type of distribution (gaussian/normal, uniform, logrithmic, etc.)
-- Visualize the data
-- Correlations between attributes(themselves) and target attribute
-- Documenting any learning
+*EXPLORE THE DATA* (This step is optional. But, it helps in making sense of the overall data and identifying valuable relationships)
+- Create copy of the training set for data exploration
+- Display shape of the dataset (df.shape)
+- Display the information associated with the dataset (df.info)
+- Identify target attribute(s)
+- List the variables that have null values.
+- Study/Explore the variables individually starting with the target variable.
+  - If variable belongs to NULLS list, display the percentage of data missing.
+  - Check if variable is categorical or continuous?
+  - Check if variable is nominal or ordinal?
+  - If categorical, display unique values and counts (df.unique, df.value_counts)
+  - If continuous, display the descriptive statistics (df.describe)
+  - If continuous, check and display the type of distribution of the variable(gaussian/normal, uniform, logarithmic, etc.)
+  - Check for any relationships between feature and target, check correlation values.
+  - Try different visualizations and see if that might generate new insights (try being creative here)
+  - Check for correlations of attributes among one another. 
+  - Document any learning. This might include noting if the variable needs,
+     - addressing NULLS, what imputation technique could be most effective, fast?
+     - Feature transformation (assigning numerical values to categorical variables, creating dummy variables, etc)
+     - Feature engineering (combining features, applying functions to variables, discretization of variables, etc)
+     - addressing Outliers.
+     - Scaling/Standardization/Normalization
 
 *DATA PREPARATION*
 - Keep original dataset and work on copies of data
-- Note: Write functions for all data transformations
-- Outlier detection and remedy. If outliers are removed, it should be done only in the training set
-- While imputing missing data with mean, median, regression, combine the attribute data from train and test sets, or drop columns (or rows). Note: If rows are dropped, it should be done only in the training set
-- Scale the features
-- Standardize or normalize features
-- Discretizing continuous features
-- Creating dummies for categorical attributes
+- Display shape of the dataset (df.shape)
+- Display the information associated with the dataset (df.info)
+- Identify target attribute(s)
+- **Note**: Write functions for all data transformations keeping in mind that the test set will eventually need these transformations. 
+- Address NULL values. For each variable (column) and sample(row) find precentage of missing values. While imputing missing data with mean, median, regression, combine the attribute data from train and test sets, or drop columns (or rows). Note: If rows are dropped, it should be done only in the training set.
+- Outlier detection and remedy. If outliers are removed, it should be done only in the training set.
+- Scale/Standardize/Normalize the features (for continuous variables).
+- Make feature transformations, create dummies for categorical variables, assign numerical values, etc
+- Perform feature engineering as documented in the data exploration step.
 
 *SPLITTING THE DATASET*	
 - Split the training data into training, development and test sets
